@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124;
+}
+
+a{
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 6px;
+
+}
+
+header nav .nav-list{
+    display: flex;
+    width: 250px;
+    height: 60px;
+    justify-content: space-evenly; /* Aca en el video usan margin para hacer la separacion, pero yo usea justify-content: porque me parecio mas comodo y menos conflictivo. */
+    align-items: center;
+    list-style: none;
+    font-size: 13px;
+}
+
+.nav-list .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    opacity: 0.65; /* Esto lo agregue porquela imagen que use de logo es mas oscura */
+}
+
+.nav-list .menu-icon:hover{
+    background-color: rgba(60,64,67,0.08);
+    background-size: 100%;
+}
+
+.nav-list .perfil-photo a img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 0;
+}
+
+main{
+    text-align: center;
+    margin: 5px;
+    
+}
+
+.main-logo{
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-logo img{
+    width: 272px;
+    height: 92px;    
+}
+
+.main-input{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.main-input-container{
+    width: 100%;
+    height: 44px;
+    max-width: 584px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-input-container:hover{
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+.main-input-container input{
+    height: 34px;
+    flex: 100%; /* Use Flex porque si usaba width cuando achicava en ancho de la pagina sobresalia */
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.icon-lupa{
+    background-image: url(https://img.icons8.com/android/24/000000/search.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 15px;
+    height: 20px;
+    margin-right: 13px;
+    margin-left: 13px;
+    opacity: 0.5;
+}
+
+.icon-mic{
+    background-image: url(https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    margin-right: 13px;
+    margin-left: 8px;
+
+}
+
+main .main-buttons{
+    height: 70px;
+    padding-top: 18px;
+}
+
+main .main-buttons button{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    min-width: 54px;
+    height: 34px;
+    margin: 11px 4px;
+    border: 1px;
+    padding: 0 16px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+main .main-buttons button:hover{
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+main .main-buttons div{
+    display: inline-block;
+}
+
+footer{
+    bottom: 0px;
+    position: absolute;
+    display: flex;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 46px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.footer-right, .footer-left{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-right a,.footer-left a{
+    padding: 15px;
+    color: #70757a;
+}
+
+/* Como aclaracion, en el footer, en el curso usan grid, pero optepor usar flex solamente porque me resultaba mas comodo. Las medidas y colores las saque en su mayoria inspeccionando la pagina original de Google
+Por lo tanto no son iguales a las del curso. */  
